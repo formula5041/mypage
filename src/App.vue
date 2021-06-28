@@ -1,26 +1,69 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Head/>
+  <main class="main">
+    <Section1/>
+    <Section2/>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Head from './components/Head.vue'
+import Section1 from './components/Section1.vue'
+import Section2 from './components/Section2.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Head,
+    Section1,
+    Section2,
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  *{
+    box-sizing: border-box;
+  }
+  :root{
+    --asidewidth: 200px;
+  }
+  h1{
+    color: chocolate;
+  }
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+  html, body {
+    background-color: #003e77;
+    margin: 0;
+  }
+  button{
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: #e209be;
+    transition: all .5s;
+    margin: 5px;
+  }
+  button:hover{
+    transform: translateY(-2px);
+    background-color: #9e0404;
+  }
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #f1f1f1;
+  }
+  .main{
+    width: calc(100% - var(--asidewidth));
+    margin-left: var(--asidewidth);
+  }
+  section{
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+  }
 </style>
