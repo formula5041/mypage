@@ -24,9 +24,14 @@ export default {
 <style>
   *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   :root{
-    --asidewidth: 200px;
+    --asidewidth: 300px;
+  }
+  a{
+    text-decoration: none;
+    color:white;
   }
   h1{
     color: chocolate;
@@ -39,14 +44,20 @@ export default {
     background-color: #003e77;
     margin: 0;
   }
+  .main{
+    border-left: 1px solid white;
+  }
   button{
     cursor: pointer;
     color: white;
-    border: none;
-    border-radius: 10px;
-    background-color: #e209be;
+    border: .5px solid #1a101094;
+    border-radius: 30px;
+    background-color: #afbb46;
     transition: all .5s;
     margin: 5px;
+    width: 150px;
+    height:50px;
+    font-size: 28px;
   }
   button:hover{
     transform: translateY(-2px);
@@ -63,7 +74,8 @@ export default {
     margin-left: var(--asidewidth);
   }
   section{
-    margin-bottom: 10px;
-    border: 1px solid #ffffff;
+    margin-bottom: 40px;
+    /* border: 1px solid #ffffff; */
+    padding:10px
   }
 </style>
