@@ -1,5 +1,5 @@
 <template>  
-  <section class="about" id="about">
+  <section class="section" id="about">
     <div class="titleContainer">
       <span class="dots"></span>
       <h3 class="titles">{{title}}</h3>
@@ -41,49 +41,32 @@ export default {
   data(){
     return{
       title:'About',
-      hash:'#',
       headshots: require('../assets/img/koala.jpg'),
       skills:[
         {skill:'JavaScript',percentage:'95%',css:'percent1'},
         {skill:'MySQL',percentage:'70%',css:'percent2'},
         {skill:'PHP',percentage:'80%',css:'percent3'},
-      ]
+      ],
+      windowH:0,
     }
-  }
+  },
+  methods: {
+
+  },
+  mounted(){
+    let about = document.querySelector('#about');
+    // console.log(about.clientHeight);
+    if(about.clientTop == 0){
+      // console.log('11');
+    }
+    // console.log(window.pageYOffset);
+    // this.windowH += 1;
+    // console.log(this.windowH);
+  },
 }
 </script>
 
 <style>
-  .titleContainer{
-    display: flex;
-    position: relative;
-    justify-content: start;
-    width: 100%;
-  }
-  .dots{
-    background-image: url(../assets/icon/dotsmenu.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    opacity: .3;
-    top: -25px;
-  }
-  .titles{
-    margin: 0;
-    margin-left: 10px;
-    color: chocolate;
-    align-self: flex-start;
-    font-size: 48px;
-    z-index: 1;
-  }
-  .about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   /* Informations */
   .myInfo{
     display: flex;

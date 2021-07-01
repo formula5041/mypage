@@ -31,7 +31,6 @@ export default {
     return{
       head:'NOM',
       fullname:'NOM NOM',
-      hash:'#',  
       headshots: require('../assets/img/koala.jpg'),
       social:[
         {src: require('../assets/icon/gmail.svg'),link: 'https://tw.yahoo.com/',},
@@ -49,9 +48,6 @@ export default {
     hireMe: ()=>{
       alert('Please, Hire me!')
     },
-    scrollDown: ()=>{
-
-    }
   }
 }
 </script>
