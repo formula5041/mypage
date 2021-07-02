@@ -32,9 +32,9 @@ export default {
         {name:'Home',icon: require('../assets/icon/home.svg'),link:'#home'},
         {name:'About',icon: require('../assets/icon/avatar.svg'),link:'#about'},
         {name:'Eduction',icon: require('../assets/icon/education.svg'),link:'#education'},
-        {name:'Experience',icon: require('../assets/icon/experience.svg'),link:''},
-        {name:'Portfolio',icon: require('../assets/icon/file.svg'),link:''},
-        {name:'LearningStyle',icon: require('../assets/icon/study.svg'),link:''},
+        {name:'Experience',icon: require('../assets/icon/experience.svg'),link:'#experience'},
+        {name:'Portfolio',icon: require('../assets/icon/file.svg'),link:'#portfolio'},
+        {name:'LearningStyle',icon: require('../assets/icon/study.svg'),link:'#learningstyle'},
       ],
       company: '© 2021 NomNom.'
     }

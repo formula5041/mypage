@@ -37,7 +37,6 @@
 
 <script>
 export default {
-  name:'Section2',
   data(){
     return{
       title:'About',

@@ -26,7 +26,6 @@
 
 <script>
 export default {
-  name:'Section1',
   data(){
     return{
       head:'NOM',

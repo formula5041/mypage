@@ -1,25 +1,32 @@
 <template>
   <Head/>
   <main class="main">
-    <Section1/>
-    <Section2/>
-    <Section3/>
+    <Home/>
+    <About/>
+    <Education/>
+    <Experience/>
+    <Portfolio/>
   </main>
 </template>
 
 <script>
 import Head from './components/Head.vue'
-import Section1 from './components/Section1.vue'
-import Section2 from './components/Section2.vue'
-import Section3 from './components/Section3.vue'
+import Home from './components/Home.vue'
+import About from './components/About.vue'
+import Education from './components/Education.vue'
+import Experience from './components/Experience.vue'
+import Portfolio from './components/Portfolio.vue'
 
 export default {
   name: 'App',
   components: {
     Head,
-    Section1,
-    Section2,
-    Section3,
+    Home,
+    About,
+    Education,
+    Experience,
+    Portfolio,
+
   },
 }
 </script>
@@ -78,7 +85,6 @@ export default {
   }
   section{
     margin-bottom: 40px;
-    /* border: 1px solid #ffffff; */
     padding:10px
   }
 </style>
