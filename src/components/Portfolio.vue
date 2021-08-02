@@ -12,14 +12,16 @@
       </div>
       <div class="portfoInfo">
         <div class="portfoItems" v-for="item in portfoContain" :key="item.id">
-          <div class="portfoImgArea">
-            <img class="portfoImgs" :src="item.icon">
-            <div class="cover">
-              <span class="typeName">{{item.type}}</span>
-              <a :href="item.link" target="_blank"><h3>{{item.name}}</h3></a>
-              <img class="Imgicon" :src="item.icon">
+          <a :href="item.link" target="_blank">
+            <div class="portfoImgArea">
+              <img class="portfoImgs" :src="item.icon">
+              <div class="cover">
+                <span class="typeName">{{item.type}}</span>
+                <h3>{{item.name}}</h3>
+                <img class="Imgicon" :src="item.icon">
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -32,19 +34,19 @@ export default {
     return{
       title:'Portfolio',
       arrshow:false,
-      selectType:['All','Coding','Volunteer','Sports',],
+      selectType:['All','JS Origin','Vue.js','Sports',],
       portfoContain:[
         {
           type:'Coding', 
           name:'K.Smooth', 
           icon: require('../assets/icon/coding.svg'),
-          link: 'https://formula5041.github.io/tfd102-031/',
+          link:'https://formula5041.github.io/K.Smooth/',
         },
         {
           type:'Coding', 
           name:'Taohilen', 
           icon: require('../assets/icon/coding2.svg'),
-          link:'https://formula5041.github.io/taohilen/taohilen.html',
+          link:'https://formula5041.github.io/taohilen/',
         },
         {
           type:'Volunteer', 
@@ -82,8 +84,6 @@ export default {
           value.closest('.portfoItems').style.display='none';
         })
       }
-      
-      
     }
   },
 }
@@ -130,7 +130,8 @@ export default {
     align-items: center;
     background-color: white;
     position: relative;
-    
+    width: 300px;
+    height: 150px;
   }
   .portfoImgs{
     width: 50%;
@@ -160,12 +161,14 @@ export default {
      background-color: rgb(134, 24, 43);
      border-radius: 0 0 5px 5px;
    }
-   .cover a {
+   /* .cover a {
      align-self: center;
      font-size: 24px;
-   }
-   .cover a h3{
-     margin: 0;
+   } */
+   .cover h3{
+    margin: 0;
+    align-self: center;
+    font-size: 28px;
    }
   .Imgicon{
     width: 20px;

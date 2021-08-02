@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{head}} <sub>{{hash}}</sub></h1>
+    <h1 class="red">{{head}} <sub class="red">{{hash}}</sub></h1>
     <div class="aside">
       <ul>
         <li 
@@ -23,10 +23,9 @@
 
 <script>
 export default {
-  name:'Head',
   data(){
     return{
-      head:'NOM',
+      head:'RED',
       hash:'#',
       navItem: [
         {name:'Home',icon: require('../assets/icon/home.svg'),link:'#home'},
@@ -34,7 +33,6 @@ export default {
         {name:'Eduction',icon: require('../assets/icon/education.svg'),link:'#education'},
         {name:'Experience',icon: require('../assets/icon/experience.svg'),link:'#experience'},
         {name:'Portfolio',icon: require('../assets/icon/file.svg'),link:'#portfolio'},
-        {name:'LearningStyle',icon: require('../assets/icon/study.svg'),link:'#learningstyle'},
       ],
       company: '© 2021 NomNom.'
     }
@@ -47,6 +45,9 @@ export default {
     width: var(--asidewidth);
     margin: 0;
     position: fixed;
+  }
+  .red{
+    color: #b30f0f;
   }
   h1{
     padding: 20px;
@@ -67,7 +68,7 @@ export default {
     transition: all .5s;
   }
   .navItem a:hover{
-    color: #e00101;
+    color: #b30f0f;
   }
   .navIcon{
     width: 30px;
