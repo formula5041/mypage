@@ -34,39 +34,41 @@ export default {
     return{
       title:'Portfolio',
       arrshow:false,
-      selectType:['All','JS Origin','Vue.js','Sports',],
+      selectType:['All','JS','Vue.js','API',],
       portfoContain:[
         {
-          type:'Coding', 
+          type:'JS', 
           name:'K.Smooth', 
-          icon: require('../assets/icon/coding.svg'),
+          icon: require('../assets/icon/tricycle.svg'),
           link:'https://formula5041.github.io/K.Smooth/',
         },
         {
-          type:'Coding', 
+          type:'Vue.js', 
+          name:'DropBeat', 
+          icon: require('../assets/icon/song.svg'),
+          link:'https://tibamef2e.com/tfd102/project/g1/'
+        },
+        {
+          type:'Vue.js', 
+          name:'MyPage', 
+          icon: require('../assets/icon/man.svg'),
+          link:'https://formula5041.github.io/mypage/'
+        },
+        {
+          type:'Vue.js', 
           name:'Taohilen', 
-          icon: require('../assets/icon/coding2.svg'),
-          link:'https://formula5041.github.io/taohilen/',
+          icon: require('../assets/icon/fish.svg'),
+          link:'https://formula5041.github.io/taohilen/'
         },
         {
-          type:'Volunteer', 
-          name:'Malaysia', 
-          icon: require('../assets/icon/volunteer.svg')
+          type:'API', 
+          name:'Weather', 
+          icon: require('../assets/icon/weather.svg')
         },
         {
-          type:'Volunteer', 
-          name:'Canoe', 
-          icon: require('../assets/icon/volunteer2.svg')
-        },
-        {
-          type:'Sports', 
-          name:'Media', 
-          icon: require('../assets/icon/sport.svg')
-        },
-        {
-          type:'Sports', 
-          name:'Cycling', 
-          icon: require('../assets/icon/sport2.svg')
+          type:'API', 
+          name:'YouBike', 
+          icon: require('../assets/icon/ubike.svg')
         },
       ],
     }
@@ -93,6 +95,7 @@ export default {
   .portfoArea{
     margin-top: 20px;
     padding: 10px;
+    height: 400px;
     width: 90%;
     border-radius: 10px;
     display: flex;
