@@ -7,7 +7,7 @@
     <div class="portfoArea">
       <div class="portfoList" >
         <ul >
-          <li v-for="item in selectType" :key="item.key" @click="selectFun(item)">{{item}}</li>
+          <li class="liItems" v-for="(item, index) in selectType" :key="index.name" @click="selectFun(item, index)">{{item}}</li>
         </ul>
       </div>
       <div class="portfoInfo">
@@ -74,7 +74,7 @@ export default {
     }
   },
   methods: {
-    selectFun(item){
+    selectFun(item, index){
       let portfoItems = document.querySelectorAll('.portfoItems');
       portfoItems.forEach(value=>{
         value.style.display='flex';
@@ -86,6 +86,10 @@ export default {
           value.closest('.portfoItems').style.display='none';
         })
       }
+      // 還沒做完，接下來要
+      let liItems = document.querySelectorAll('.liItems');
+      // liItems.style.backgroundColor = '#00000023';
+      liItems[index].style.backgroundColor = 'chocolate';
     }
   },
 }
@@ -114,6 +118,8 @@ export default {
   .portfoList ul li {
     margin: 0px 10px;
     cursor: pointer;
+    background-color: #00000023;
+    border-radius: 10px;
   }
   /* Info */
   .portfoInfo{
@@ -133,7 +139,7 @@ export default {
     align-items: center;
     background-color: white;
     position: relative;
-    width: 300px;
+    width: 250px;
     height: 150px;
   }
   .portfoImgs{
@@ -164,10 +170,6 @@ export default {
      background-color: rgb(134, 24, 43);
      border-radius: 0 0 5px 5px;
    }
-   /* .cover a {
-     align-self: center;
-     font-size: 24px;
-   } */
    .cover h3{
     margin: 0;
     align-self: center;
