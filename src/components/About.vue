@@ -119,6 +119,8 @@ export default {
     font-weight: bold;
   }
   .info{
+    color: aliceblue;
     font-size: 22px;
+    line-height: 40px;
   }
 </style>

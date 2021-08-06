@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .eduArea{
     margin-top: 20px;
     width: 90%;
@@ -126,7 +126,7 @@ export default {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     border: 0.1px solid black;
     border-radius: 10px;
@@ -151,10 +151,10 @@ export default {
   }
   .eduLetters p{
     word-wrap:break-word;
-    line-height: 30px;
+    line-height: 40px;
     font-size: 22px;
     padding-right: 10px;
-    color: #07041f;
+    color: #040214;
   }
   .edupics{
     display: flex;
@@ -163,9 +163,10 @@ export default {
     align-items: center;
     width: 40%;
     border-radius: 20px;
+    margin-top: 36px;
   }
   .edupics img{
-    width: 80%;
+    width: 90%;
     border-radius: 10px;
   }
   .edupics p{

@@ -22,6 +22,9 @@
               </div>
             </div>
           </a>
+          <div>
+            <p>{{item.type}}：{{item.name}}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -68,7 +71,8 @@ export default {
         {
           type:'API', 
           name:'YouBike', 
-          icon: require('../assets/icon/ubike.svg')
+          icon: require('../assets/icon/ubike.svg'),
+          link:'https://formula5041.github.io/youbikeconnect/'
         },
       ],
     }
@@ -95,7 +99,7 @@ export default {
   .portfoArea{
     margin-top: 20px;
     padding: 10px;
-    height: 400px;
+    height: 500px;
     width: 90%;
     border-radius: 10px;
     display: flex;
@@ -124,6 +128,7 @@ export default {
   }
   .portfoItems{
     display: flex;
+    flex-direction: column;
     width: 30%;
     margin: 10px;
   }
