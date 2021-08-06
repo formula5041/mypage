@@ -119,7 +119,7 @@ export default {
   .schools{
     color: chocolate;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 26px;
     margin: 10px 0;
   }
   .eduIntro{
@@ -130,9 +130,8 @@ export default {
     width: 100%;
     border: 0.1px solid black;
     border-radius: 10px;
-    background-color: #aabedd;
+    background-color: whitesmoke;
     padding:10px;
-    color:black;
     padding: 10px;
     transition: all .5s;
   }
@@ -152,9 +151,10 @@ export default {
   .eduLetters p{
     word-wrap:break-word;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 20px;
     padding-right: 10px;
-    color: #040214;
+    font-weight: 400;
+    color: darkslategray;
   }
   .edupics{
     display: flex;

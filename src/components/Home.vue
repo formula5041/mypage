@@ -7,6 +7,7 @@
       >
     </div>
     <h1>{{fullname}}</h1>
+    <span class="intro">1993 / 05 / 14</span>
     <span class="intro">I'm a Front-End developer</span>
     <ul class="social">
       <li v-for="item in social" :key="item.id">
@@ -54,7 +55,7 @@ export default {
     justify-content: center;
   }
   .headshot{
-    margin-top: 30%;
+    margin-top: 25%;
     width: 200px;
     height: 200px;
     object-fit: cover;

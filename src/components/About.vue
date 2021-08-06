@@ -120,7 +120,7 @@ export default {
   }
   .info{
     color: aliceblue;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 40px;
   }
 </style>

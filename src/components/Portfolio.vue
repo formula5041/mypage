@@ -45,29 +45,27 @@ export default {
           icon: require('../assets/icon/tricycle.svg'),
           link:'https://formula5041.github.io/K.Smooth/',
         },
-        {
-          type:'Vue.js', 
-          name:'DropBeat', 
-          icon: require('../assets/icon/song.svg'),
-          link:'https://tibamef2e.com/tfd102/project/g1/'
-        },
+        // {
+        //   type:'Vue.js', 
+        //   name:'DropBeat', 
+        //   icon: require('../assets/icon/song.svg')
+        // },
         {
           type:'Vue.js', 
           name:'MyPage', 
           icon: require('../assets/icon/man.svg'),
           link:'https://formula5041.github.io/mypage/'
         },
-        {
-          type:'Vue.js', 
-          name:'Taohilen', 
-          icon: require('../assets/icon/fish.svg'),
-          link:'https://formula5041.github.io/taohilen/'
-        },
-        {
-          type:'API', 
-          name:'Weather', 
-          icon: require('../assets/icon/weather.svg')
-        },
+        // {
+        //   type:'Vue.js', 
+        //   name:'Taohilen', 
+        //   icon: require('../assets/icon/fish.svg')
+        // },
+        // {
+        //   type:'API', 
+        //   name:'Weather', 
+        //   icon: require('../assets/icon/weather.svg')
+        // },
         {
           type:'API', 
           name:'YouBike', 
@@ -90,9 +88,10 @@ export default {
           value.closest('.portfoItems').style.display='none';
         })
       }
-      // 還沒做完，接下來要
       let liItems = document.querySelectorAll('.liItems');
-      // liItems.style.backgroundColor = '#00000023';
+      liItems.forEach( item=>{
+        item.style.backgroundColor = '#00000023';
+      })
       liItems[index].style.backgroundColor = 'chocolate';
     }
   },
@@ -103,7 +102,7 @@ export default {
   .portfoArea{
     margin-top: 20px;
     padding: 10px;
-    height: 500px;
+    /* height: 250px; */
     width: 90%;
     border-radius: 10px;
     display: flex;
@@ -146,6 +145,17 @@ export default {
     position: relative;
     width: 250px;
     height: 150px;
+  }
+  @media screen and (max-width:1280px){
+    .portfoImgArea{
+      width: 200px;
+    }
+  }
+  @media screen and (max-width:1080px){
+    .portfoInfo{
+      flex-direction: column;
+      align-items: center;
+    }
   }
   .portfoImgs{
     width: 50%;
