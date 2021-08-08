@@ -7,7 +7,7 @@
       >
     </div>
     <h1>{{fullname}}</h1>
-    <span class="intro">1993 / 05 / 14</span>
+    <span class="intro">1993 / 05 / 14  |  0930-656-560</span>
     <span class="intro">I'm a Front-End developer</span>
     <ul class="social">
       <li v-for="item in social" :key="item.id">
