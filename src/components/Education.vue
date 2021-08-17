@@ -12,12 +12,12 @@
           <span>{{item.depart}}</span>
         </div>
       </div>
-      <div v-for="(item) in eduIntroArr" :key="item.key" class="eduIntro" :class="item.switch" >
+      <div v-for="(item, index) in eduIntroArr" :key="item.key" class="eduIntro" :class="item.switch" >
         <div class="eduLetters">
           <p>{{item.letters}}</p>
         </div>
         <div class="edupics">
-          <img :src="item.src">
+          <img :src="item.src" @click="linkFun(index)" :class="theImg">
           <p>{{item.imgInfo}}</p>
         </div>
       </div>
@@ -29,10 +29,11 @@
 export default {
   data(){
     return{
+      theImg: 'hover',
       title:'Education',
       bgColor:'cardArea null',
       cardInfo:[
-        {src:require('../assets/icon/eduCoding.svg'),school:'緯育Tibame',depart:'前端工程師養成班'},
+        {src:require('../assets/icon/eduCoding.svg'),school:'緯育TibaMe',depart:'前端工程師養成班'},
         {src:require('../assets/icon/graduation.svg') ,school:'臺灣師範大學',depart:'公民教育與活動領導學系-碩士班'},
         {src:require('../assets/icon/school.svg'),school:'彰化師範大學',depart:'體育學系 & 師資培育學程'},
       ],
@@ -42,7 +43,7 @@ export default {
           imgInfo:'程式專題發表',
           letters:
           `
-          緯育Tibame的課程主要以前端網頁設計為主。在課程的規劃下，學習過前端三劍客HTML、CSS、JavaScript，此階段以排版、RWD、DOM元件控制、事件物件、儲存機制等作為學習重點，並將以上所學技能在課程第一階段完成個人的專題網站，而我設計的是兒童學步車的官方購物網站，主要內容有產品購買、留言板、會員中心、購物車、小遊戲等頁面，很榮幸的在此階段獲得班上最佳RWD的殊榮；最後一個階段是學習Git版本控制、Vue.js、PHP、MySQL等技術，將其所學以團隊方式開發全端的網頁。
+          緯育TibaMe的課程主要以前端網頁設計為主。在課程的規劃下，學習過前端三劍客HTML、CSS、JavaScript，此階段以排版、RWD、DOM元件控制、事件物件、儲存機制等作為學習重點，並將以上所學技能在課程第一階段完成個人的專題網站，而我設計的是兒童學步車的官方購物網站，主要內容有產品購買、留言板、會員中心、購物車、小遊戲等頁面，很榮幸的在此階段獲得班上最佳RWD的殊榮；最後一個階段是學習Git版本控制、Vue.js、PHP、MySQL等技術，將其所學以團隊方式開發全端的網頁。
           `,
           switch:'on',
         },
@@ -77,12 +78,25 @@ export default {
         item.style='background-color:#00000000; border-radius:0px;'
       })
       document.querySelectorAll('.cardArea')[index].style= 'background-color:#0000002c; border-radius:20px;';
+      if (index === 0) {
+        this.theImg = 'hover'
+      } else {
+        this.theImg = 'nonHover'
+      }
     },
+    linkFun(index){
+      if (index === 0) {
+        window.open(' https://formula5041.github.io/K.Smooth/ ', 'K.Smooth')
+      }
+    }
   },
 }
 </script>
 
-<style scoped>
+<style scoped> 
+  .hover {
+    cursor: pointer;
+  }
   .eduArea{
     margin-top: 20px;
     width: 90%;
