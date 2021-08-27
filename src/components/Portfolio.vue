@@ -113,12 +113,12 @@ export default {
   .portfoInfo{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     width: 100%;
   }
   .portfoItems{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 30%;
     margin: 10px;
   }
@@ -200,6 +200,9 @@ export default {
       width: 100%;
       margin: 0px;
       margin-top: 20px;
+    }
+    .cover{
+      opacity: .4;
     }
   }
 </style>

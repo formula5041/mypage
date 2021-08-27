@@ -6,6 +6,7 @@
     <Education/>
     <Experience/>
     <Portfolio/>
+    <h2 class="toTop" @click="toTheTop">To Top</h2>
   </main>
 </template>
 
@@ -28,6 +29,11 @@ export default {
     Portfolio,
 
   },
+  methods: {
+    toTheTop(){
+      window.scrollTo(0, 0)
+    }
+  }
 }
 </script>
 
@@ -85,7 +91,22 @@ export default {
   }
   section{
     margin-bottom: 40px;
-    padding:10px
+    padding:10px;
+  }
+  .toTop{
+    width: 90%;
+    text-align: end;
+    cursor: pointer;
+    transform: translateY(0px);
+    animation-name: toTheTop;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  @keyframes toTheTop{
+    100%{
+      transform: translateY(-10px);
+    }
   }
   @media (max-width:450px) {
     :root{
