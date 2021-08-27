@@ -45,27 +45,12 @@ export default {
           icon: require('../assets/icon/tricycle.svg'),
           link:'https://formula5041.github.io/K.Smooth/',
         },
-        // {
-        //   type:'Vue.js', 
-        //   name:'DropBeat', 
-        //   icon: require('../assets/icon/song.svg')
-        // },
         {
           type:'Vue.js', 
           name:'MyPage', 
           icon: require('../assets/icon/man.svg'),
           link:'https://formula5041.github.io/mypage/'
         },
-        // {
-        //   type:'Vue.js', 
-        //   name:'Taohilen', 
-        //   icon: require('../assets/icon/fish.svg')
-        // },
-        // {
-        //   type:'API', 
-        //   name:'Weather', 
-        //   icon: require('../assets/icon/weather.svg')
-        // },
         {
           type:'API', 
           name:'YouBike', 
@@ -195,5 +180,26 @@ export default {
     height: 20px;
     margin: 10px;
     margin-top: 0;
+  }
+  @media (max-width:450px) {
+    .portfoList ul li {
+      width: 50px;
+      text-align: center;
+    }
+    .portfoInfo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+    .portfoItems{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin: 0px;
+      margin-top: 20px;
+    }
   }
 </style>

@@ -7,7 +7,7 @@
       >
     </div>
     <h1>{{fullname}}</h1>
-    <span class="intro">1993 / 05 / 14  |  0930-656-560</span>
+    <span class="intro">1993/05/14  |  0930-656-560</span>
     <span class="intro">I'm a Front-End developer</span>
     <ul class="social">
       <li v-for="item in social" :key="item.id">
@@ -111,6 +111,7 @@ export default {
     position: absolute;
     left: 13px;
     bottom: 50px;
+    transform: translateY(50px);
     animation-name: scrollMove;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -118,7 +119,26 @@ export default {
   }
   @keyframes scrollMove{
     100%{
-      transform: translateY(40px);
+      transform: translateY(10px);
+    }
+  }
+  @media (max-width:450px) {
+    .headshot{
+      width: 120px;
+      height: 120px;
+    }
+    h1{
+      margin: 0;
+      color: white;
+      font-size: 32px;
+    }
+    .intro{
+      font-size: 16px;
+      margin: 20px;
+    }
+    .social li a img{
+      width: 25px;
+      height: 25px;
     }
   }
 </style>

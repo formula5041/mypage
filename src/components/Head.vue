@@ -46,6 +46,11 @@ export default {
     margin: 0;
     position: fixed;
   }
+  @media (max-width:450px) {
+    header{
+      transform: translateX(-300px);
+    }
+  }
   .red{
     color: #b30f0f;
   }

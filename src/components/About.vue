@@ -123,4 +123,26 @@ export default {
     font-size: 20px;
     line-height: 40px;
   }
+  @media (max-width:450px) {
+    .detailInfo{
+      padding: 0px;
+    }
+    .leftInfo{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-size: 20px;
+      margin-left: 20px;
+    }
+    .info{
+      color: aliceblue;
+      font-size: 18px;
+      line-height: 40px;
+    }
+    .leftInfo button{
+      align-self: center;
+      width: 150px;
+      margin-bottom: 30px;
+    }
+  }
 </style>

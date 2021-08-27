@@ -100,25 +100,25 @@ export default {
     margin: 20px 0;
     margin-right: 25px;
   }
-   .line::before{
-     content: '';
-     position: absolute;
-     background-image: url('../assets/icon/experience.svg');
-     background-repeat: no-repeat;
-     background-size: contain;
-     width: 15px;
-     height: 15px;
-     top: 0;
-     left: -6px;
-   }
-   .expdetail h2{
-     color: tomato;
-     font-size: 28px;
-   }
-   .expdetail p{
-     font-size: 20px;
-     line-height: 40px;
-   }
+  .line::before{
+    content: '';
+    position: absolute;
+    background-image: url('../assets/icon/experience.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: -6px;
+  }
+  .expdetail h2{
+    color: tomato;
+    font-size: 28px;
+  }
+  .expdetail p{
+    font-size: 20px;
+    line-height: 40px;
+  }
   /* Right Part */
   .expRight{
     width: 50%;
@@ -134,5 +134,38 @@ export default {
   }
   .picNote{
     color: tomato;
+  }
+  @media (max-width:450px) {
+    .expInfo{
+      margin-bottom: 50px;
+      width: 100%;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    .expLeft{
+      width: 100%;
+    }
+    .expdetail h2{
+      color: tomato;
+      font-size: 20px;
+    }
+    .expdetail p{
+      font-size: 16px;
+      line-height: 40px;
+    }
+    .expRight{
+      width: 100%;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    .expImg{
+      width: 100%;
+      border-radius: 10px;
+      opacity: 1;
+    }
+    .picNote{
+      display: none;
+    }
   }
 </style>

@@ -146,7 +146,6 @@ export default {
     border-radius: 10px;
     background-color: whitesmoke;
     padding:10px;
-    padding: 10px;
     transition: all .5s;
   }
   .on{
@@ -185,7 +184,50 @@ export default {
   }
   .edupics p{
     font-size: 20px;
-    color: orangered;
+    color: #0b8080;
     font-weight: bold;
+  }
+  @media (max-width:450px) {
+    .eduCards{
+      flex-direction: column;
+      align-items: center;
+    }
+    .cardArea{
+      width: 100%;
+    }
+    .cardArea span {
+      font-size: 12px;
+    }
+    .eduIcon{
+      width: 40px;
+      height: 40px;
+    }
+    .schools{
+      font-size: 20px;
+    }
+    .eduIntro{
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .eduLetters{
+      width: 100%;
+    }
+    .eduLetters p{
+      line-height: 32px;
+      font-size: 16px;
+      padding-right: 0;
+      margin-top: 0;
+    }
+    .edupics{
+      margin-top: 10px;
+      width: 100%;
+    }
+    .edupics img{
+      width: 100%;
+    }
+    .edupics p{
+      font-size: 16px;
+      color: #0b8080;
+    }
   }
 </style>

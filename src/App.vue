@@ -87,4 +87,17 @@ export default {
     margin-bottom: 40px;
     padding:10px
   }
+  @media (max-width:450px) {
+    :root{
+      --asidewidth: 0px;
+    }
+    .main{
+      border-left: 0px solid white;
+    }
+    button{
+      width: 120px;
+      height:40px;
+      font-size: 18px;
+    }
+  }
 </style>
